@@ -1,0 +1,29 @@
+* {
+	font-family: sans-serif;
+/*	padding: 0;
+	margin: 0;
+*/}
+
+.whiteText {
+	color: #FFFFFF;
+}
+
+table, td {
+	border: 1px solid #000000;
+}
+
+/*table td:first-child {
+	background: #AAAAAA;
+}
+*/
+table tr:nth-child(odd) {
+	background: #EEEEEE;
+}
+
+#chatForm {
+	background: #000000;
+	padding: 3px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
