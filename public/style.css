@@ -12,6 +12,17 @@ table, td {
 	border: 1px solid #000000;
 }
 
+#tableDiv {
+	width: 70%;
+	float: left;
+}
+
+#loggedInUsers {
+	width: 29%;
+	float: right;
+	border: solid red 1px;
+}
+
 /*table td:first-child {
 	background: #AAAAAA;
 }

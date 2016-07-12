@@ -1,9 +1,11 @@
-var request = require('superagent')
+var request = require('superagent') // Do I need this?
 var express = require('express')
 var router = express.Router()
 var config = require('../knexfile.js')['development']
 var knex = require('knex')(config)
 var cookie = require('cookie')
+// var io = require('../app.js')
+
 
 router.get('/', function(req, res) {
 	res.render('home')

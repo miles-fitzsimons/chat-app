@@ -3,6 +3,8 @@
 <a href="/home">Home</a>
 <br><br>
 
+<div>
+<div id="tableDiv">
 <table>
 	<tr>
 		<th>User</th>
@@ -15,6 +17,9 @@
 	</tr>
 	{{/each}}
 </table>
+</div>
+<div id="loggedInUsers">LOGGED IN USERS</div>
+</div>
 
 <br><br><br>
 <form id="chatForm" action="/chat" method="post">
@@ -23,3 +28,13 @@
 	<span class="whiteText">or</span>
 	<input type="submit" value="Random Quote" name="quote" />
 </form>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var chatSocket = io('/chat')
+  chatSocket.on('chat', function(data) {
+    console.log('AT CHAT', data)
+    $('#loggedInUsers').append('<p>'+data.userName+'</p>')
+    chatSocket.emit('chat', {chat: 'data from chat'})
+  })
+</script>

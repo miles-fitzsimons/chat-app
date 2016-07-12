@@ -1,10 +1,11 @@
 <h1>New chat thingee</h1>
 
-<form action="/home" method="post">
+<form id="temp" action="/home" method="post">
 	<p>What is your name?</p>
 	<input type="text" name="userName" />
 	<input type="submit" value="OK" />
 </form>
+
 
 {{#if newUser}}
 <p>Welcome, {{userName}}.</p>
@@ -15,12 +16,3 @@
 <p>{{userName}} already exists. Pick another name.</p>
 {{/if}}
 
-<!-- <br><br>
-<form action="/home" method="post">
-	<input type="submit" name="randomQuote" value="Random Quote" />
-</form>
-
-{{#if quote}}
-<p>{{quote}} ~ {{quotee}}</p>
-{{/if}}
- -->

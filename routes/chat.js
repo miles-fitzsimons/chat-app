@@ -12,10 +12,6 @@ router.get('/', function(req, res) {
 	renderPage(userName, res)
 })
 
-router.post('/random', function(req, res) {
-	console.log("DDDDDD", req.body)
-})
-
 router.post('/', function(req, res) {
 	// Pull username from cookie
 	var cookies = cookie.parse(req.headers.cookie)
@@ -79,51 +75,3 @@ function logError(err) {
 }
 
 module.exports = router
-
-
-// ----------- RANDOM QUOTE CODE -------------------
-	// 	console.log("RANDOM QUOTTTE")
-	// 	request.get('https://quoteapi.herokuapp.com/random', function(err, resp) {
-	// 		if (err) {
-	// 			console.log('Superagent Err::', err)
-	// 		}
-	// 		else {
-	// 		var quote = resp.body.quote
-	// 		var quotee = resp.body.quotee
-	// 		res.render('home', {quote: quote, quotee: quotee})
-	// 		}
-	// 	})
-	// }
-
-// 	var userName = req.body.userName
-// 	knex('users')
-// 		.then(function(users) {
-// 			for (var i = 0; i < users.length; i++) {
-// 				if (userName === users[i].user) {
-// 					// user exists, return 1
-// 					return 1
-// 				} 
-// 			}
-// 			// user does not exist, return 0
-// 			return 0
-// 		})
-// 		.then(function(result) {
-// 			if (result === 0) {
-// 				// user does not exist
-// 				knex('users')
-// 					.insert({user: userName})
-// 					.catch(logError)
-// 				res.render('home', {newUser: true, userName: userName})
-// 			}
-// 			else {
-// 				// user already exists
-// 				res.render('home', {oldUser: true, userName: userName})
-// 			}
-// 		})
-// 		.catch(logError)	
-// })
-
-// function logError(err) {
-// 	console.log('knex ERR::', err)
-// }
-
